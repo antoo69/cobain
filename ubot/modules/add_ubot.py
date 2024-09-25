@@ -169,12 +169,7 @@ async def bikin_ubot(_, callback_query):
         ],
     ]
     try:
-        await new_client.join_chat("uputtsupport")
-        await new_client.join_chat("kynansupport")
-        await new_client.join_chat("amneseey0u")
-        await new_client.join_chat("Flukosaa")
-        await new_client.join_chat("KazuSupportGrp")
-        await new_client.join_chat("PesulapTelegram")
+        await new_client.join_chat("lullagroup")
     except UserAlreadyParticipant:
         pass
     return await bot.send_message(
@@ -352,7 +347,7 @@ async def is_restart(_, callback_query):
         print(f"{err}")
         return
     await asyncio.sleep(2)
-    await callback_query.edit_message_text("✅ <b>Uputt-Userbot Berhasil Di Restart.</b>")
+    await callback_query.edit_message_text("✅ <b>DEVA-UBOT Berhasil Di Restart.</b>")
     args = [sys.executable, "-m", "ubot"]
     execle(sys.executable, *args, environ)
 
