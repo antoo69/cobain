@@ -9,7 +9,7 @@ from pyrogram import *
 from pyrogram.handlers import *
 from pyrogram.types import *
 from pyromod import listen
-import pytgcalls
+#import pytgcalls
 
 from ubot.config import *
 
