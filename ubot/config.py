@@ -27,13 +27,13 @@ OPENAI_KEY = os.getenv(
     "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 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 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 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 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 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",
 ).split()
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "6560233633:AAEvCQv7YDsMMFdWTAsjBJmmg143MlR226E")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7741660290:AAFeXv7RxG8AoO8RXwgNTmsmvxdeNdgkAxk")
 
-OWNER_ID = int(os.environ.get("OWNER_ID", "1860375797"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "6096141441"))
 
 MAX_BOT = int(os.environ.get("MAX_BOT", "45"))
 
-SKY = int(os.environ.get("SKY", "-1001682195874"))
+SKY = int(os.environ.get("SKY", "-1002314438515"))
 
 MONGO_URL = os.environ.get(
     "MONGO_URL",
