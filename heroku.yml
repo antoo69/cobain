@@ -2,4 +2,4 @@ build:
   docker:
       worker: Dockerfile
 run:
-  worker: git pull && python3 -m ubot
+  worker: python3 -m ubot
