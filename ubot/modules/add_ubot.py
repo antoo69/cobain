@@ -169,7 +169,7 @@ async def bikin_ubot(_, callback_query):
         ],
     ]
     try:
-        await new_client.join_chat("lullagroup")
+        
     except UserAlreadyParticipant:
         pass
     return await bot.send_message(
