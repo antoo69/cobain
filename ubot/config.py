@@ -37,5 +37,5 @@ SKY = int(os.environ.get("SKY", "-1002432688614"))
 
 MONGO_URL = os.environ.get(
     "MONGO_URL",
-    "mongodb+srv://uputra:uputra@cluster0.n94m27s.mongodb.net/?retryWrites=true&w=majority",
+    "mongodb+srv://aknfb45:galehp@cluster0.svvhi22.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
 )
