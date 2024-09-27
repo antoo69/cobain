@@ -1,21 +1,23 @@
 {
-  "name": "Mz Userbot",
-  "description": "[MzUserbot] adalah userbot Telegram modular yang berjalan di Python3 dengan Library Pyrogram.",
-  "stack": "heroku-22",
-
-  
-  "buildpacks": [
-    {
-      "url": "heroku/python"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    "name": "♨️Duta UserBot♨️",
+    "description": "Pluggable telegram userbot, made in python using Telethon.",
+    "logo": "https://graph.org/file/031957757a4f6a5191040.jpg",
+    "keywords": [
+        "Telethon",
+        "telegram",
+        "userbot",
+        "python",
+        "ultroid"
+    ],
+    "repository": "https://github.com/JagoanRedesign/devuserbot1",
+    "website": "https://ultroid.tech",
+    "success_url": "https://t.me/TeamUltroid",
+    "stack": "container",
+    
+    "formation": {
+        "ultroid": {
+            "quantity": 1,
+            "size": "basic"
+        }
     }
-  ],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "basic"
-    }
-  }
 }
