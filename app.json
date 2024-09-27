@@ -2,7 +2,7 @@
     "name": "♨️Duta UserBot♨️",
     "description": "Pluggable telegram userbot, made in python using Telethon.",
     "logo": "https://graph.org/file/031957757a4f6a5191040.jpg",
-    "stack": "heroku-22",
+    "stack": "heroku-24",
     "repository": "https://github.com/JagoanRedesign/devuserbot1",
     "website": "https://ultroid.tech",
     "success_url": "https://t.me/TeamUltroid",
