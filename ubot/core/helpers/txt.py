@@ -37,7 +37,7 @@ Apa Ada Yang Bisa Saya Bantu ? Jika Kamu Sudah Melakukan Pembayaran Silakan Klik
 
 <b>💳 Metode Pembayaran:</b>
  <b>├──• Dana </b>
- <b>├─• <code>082288195789</code></b>
+ <b>├─• <code>087873724521</code></b>
 
 
 <b>🔖 Total Harga: ʀᴘ {total}.000</b>
