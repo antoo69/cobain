@@ -12,7 +12,7 @@ FORCE_SUBCRIBE = list(
     map(
         int,
         getenv(
-            "FORCE_SUBCRIBE", "-1001825363971 -1001812143750 -1001982790377"
+            "FORCE_SUBCRIBE", "-1002079962599 -1001574189667 -1002128807252"
         ).split(),
     )
 )
