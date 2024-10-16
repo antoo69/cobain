@@ -128,8 +128,8 @@ async def get_prem_user(client, message):
         await message.reply_text(text)
 
 
-@bot.on_message(filters.command("seles"))
-@ubot.on_message(anjay("seles") & filters.me)
+@bot.on_message(filters.command("seler"))
+@ubot.on_message(anjay("seler") & filters.me)
 async def seles_user(client, message):
     user_id = await extract_user(message)
     Tm = await message.reply("Tunggu Sebentar...")
@@ -153,8 +153,8 @@ async def seles_user(client, message):
         await message.reply_text("Terjadi kesalahan yang tidak diketahui")
 
 
-@bot.on_message(filters.command("delseles"))
-@ubot.on_message(anjay("delseles") & filters.me)
+@bot.on_message(filters.command("delseler"))
+@ubot.on_message(anjay("delseler") & filters.me)
 async def unseles_user(client, message):
     user_id = await extract_user(message)
     if message.from_user.id != OWNER_ID:
@@ -178,8 +178,8 @@ async def unseles_user(client, message):
         await message.reply_text("Terjadi kesalahan yang tidak diketahui")
 
 
-@bot.on_message(filters.command("getseles"))
-@ubot.on_message(anjay("getseles") & filters.me)
+@bot.on_message(filters.command("addseler"))
+@ubot.on_message(anjay("addseler") & filters.me)
 async def get_seles_user(client, message):
     if message.from_user.id != OWNER_ID:
         return
