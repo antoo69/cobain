@@ -7,7 +7,7 @@ from atexit import register
 from pyrogram import idle
 from pyrogram.errors import RPCError
 
-from ubot import Ubot, bot, installPeer
+from ubot import ubot, bot, installPeer
 from ubot.core.functions.expired import expiredUserbots
 from ubot.core.functions.plugins import loadPlugins
 from ubot.utils.dbfunctions import *
