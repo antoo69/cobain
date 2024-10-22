@@ -3,19 +3,21 @@ import re
 import time
 from os import execvp
 from sys import executable
-
+import asyncio
 from aiohttp import ClientSession
 from pyrogram import *
 from pyrogram.handlers import *
 from pyrogram.types import *
 from pyromod import listen
-#import pytgcalls
-
+from pytgcalls import PyTgCalls  # Import PyTgCalls
 from ubot.config import *
 
-aiosession = ClientSession()
+# Create aiohttp session within an async function
+async def create_session():
+    return ClientSession()
 
-CLIENT_TYPE = pytgcalls.GroupCallFactory.MTPROTO_CLIENT_TYPE.PYROGRAM
+aiosession = asyncio.run(create_session())  # Run the event loop to create the session
+
 PLAYOUT_FILE = "/ubot/resources/vc.mp3"
 OUTGOING_AUDIO_BITRATE_KBIT = 218
 
@@ -47,18 +49,13 @@ class Ubot(Client):
     __module__ = "pyrogram.client"
     _ubot = []
     _prefix = {}
-    #_get_my_id = []
-    #_translate = {}
-    #_get_my_peer = {}
 
     def __init__(self, api_id, api_hash, device_model="v1uputt", **kwargs):
         super().__init__(**kwargs)
         self.api_id = api_id
         self.api_hash = api_hash
         self.device_model = device_model
-        self.vc = pytgcalls.GroupCallFactory(
-            self, CLIENT_TYPE, OUTGOING_AUDIO_BITRATE_KBIT
-        ).get_file_group_call(PLAYOUT_FILE)
+        self.vc = PyTgCalls(self)  # Use PyTgCalls for group calls
 
     def on_message(self, filters=None, group=0):
         def decorator(func):
@@ -73,14 +70,13 @@ class Ubot(Client):
 
     async def start(self):
         await super().start()
+        await self.vc.start()  # Start PyTgCalls
         handler = await get_pref(self.me.id)
         if handler:
             self._prefix[self.me.id] = handler
         else:
             self._prefix[self.me.id] = ["."]
         self._ubot.append(self)
-        #self._get_my_id.append(self.me.id)
-        #self._translate[self.me.id] = {"negara": "id"}
         print(f"Starting Userbot ({self.me.id}|{self.me.first_name})")
 
 
@@ -91,10 +87,8 @@ ubot = Ubot(
     device_model="v4uputt",
 )
 
-
 async def get_prefix(user_id):
     return ubot._prefix.get(user_id, [".", "?", "!"])
-
 
 def anjay(cmd):
     command_re = re.compile(r"([\"'])(.*?)(?<!\\)\1|(\S+)")
@@ -112,7 +106,7 @@ def anjay(cmd):
                 if not text.startswith(prefix):
                     continue
 
-                without_prefix = text[len(prefix) :]
+                without_prefix = text[len(prefix):]
 
                 for command in cmd.split("|"):
                     if not re.match(
@@ -139,7 +133,6 @@ def anjay(cmd):
         return False
 
     return filters.create(func)
-
 
 class Bot(Client):
     def __init__(self, **kwargs):
@@ -168,7 +161,6 @@ bot = Bot(
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
-    #session_string=BOT_SESSION,
     device_model="v1uputt",
 )
 
