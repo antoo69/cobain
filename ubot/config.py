@@ -24,7 +24,7 @@ USER_ID = list(map(int, os.getenv("USER_ID", "6334438071").split()))
 
 OPENAI_KEY = os.getenv(
     "OPENAI_KEY",
-    "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",
+    "671373f5c27d529721de",
 ).split()
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "7696179651:AAHKlvY1xYz_F14QPv3DcVqJYgBcWUj4MTQ")
