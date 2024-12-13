@@ -27,15 +27,15 @@ OPENAI_KEY = os.getenv(
     "671373f5c27d529721de",
 ).split()
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7696179651:AAHKlvY1xYz_F14QPv3DcVqJYgBcWUj4MTQ")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
 OWNER_ID = int(os.environ.get("OWNER_ID", "6334438071"))
 
-MAX_BOT = int(os.environ.get("MAX_BOT", "45"))
+MAX_BOT = int(os.environ.get("MAX_BOT", "50"))
 
 SKY = int(os.environ.get("SKY", "-1002479656527"))
 
 MONGO_URL = os.environ.get(
     "MONGO_URL",
-    "mongodb+srv://musicbot9809:buburayam1@cluster0.vwbhb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "",
 )
